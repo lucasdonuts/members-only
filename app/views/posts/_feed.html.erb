@@ -5,7 +5,7 @@
       <div class="media-left">
         <figure class="image is-64x64">
           <% if user_signed_in? %>
-            <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.username) %>
+            <%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.username) %>
           <% else %>
             <img src="https://bulma.io/images/placeholders/64x64.png">
           <% end %>
@@ -16,7 +16,7 @@
           <p class="title is-4"><%= link_to post.title, post %></p>
           <p class="subtitle">
             <% if user_signed_in? %>
-              <strong><%= current_user.username %></strong>
+              <strong><%= post.user.username %></strong>
             <% else %>
               <strong>Anonymous User</strong>
             <% end %>
