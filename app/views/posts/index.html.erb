@@ -1,8 +1,26 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="column is-10">
+      <div class="column">
         <%= render 'feed' %>
+      </div>
+      <div class="column is-narrow">
+        <% if user_signed_in? %>
+          <%= render 'profile' %>
+        <% else %>
+          <div class="box has-text-centered" id="no-user">
+            <div class="level">
+              <div class="level-left is-mobile">
+                <p>
+                  <%= link_to "Sign In", new_user_session_path, class: "button is-dark" %>
+                </p>
+                <p>
+                  <%= link_to "Register", new_user_registration_path, class: "button is-grey-light" %>
+                </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

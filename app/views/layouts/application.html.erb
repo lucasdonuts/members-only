@@ -21,36 +21,15 @@
           <p class="alert"><%= alert %></p>
         </div>
       <% end %>
-      <nav class="navbar is-dark">
-        <div class="navbar-brand">
-          <%= link_to root_path, class: "navbar-item" do %>
-            <h1 class="title">Members Only</h1>
-          <% end %>
-        </div>
-      </nav>
-      <nav class="navbar is-dark" id="menu">
-        <div class="navbar-brand" style="min-height:30px;">
-          <div class="navbar-item menu">
-            <div class="field is-grouped">
-              <% if user_signed_in? %>
-                <p class="control">
-                  <%= link_to "New Post", new_post_path, class: "button is-dark" %>
-                </p>
-                <p>
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "button is-dark" %>
-                </p>
-              <% else %>
-                <p class="control">
-                  <%= link_to "Sign In", new_user_session_path, class: "button is-dark" %>
-                </p>
-                <p>
-                  <%= link_to "Sign Up", new_user_registration_path, class: "button is-dark" %>
-                </p>
-              <% end %>
-            </div>
+      <section class="section">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <%= link_to root_path, class: "navbar-item" do %>
+              <h1 class="title">Members Only</h1>
+            <% end %>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </section>
     <%= yield %>
   </body>
 </html>
