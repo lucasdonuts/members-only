@@ -14,21 +14,46 @@
  *= require_self
  */
 
- @import "bulma";
+@import "bulma";
 
- .navbar-brand {
-   position: absolute;
-   left: 50%;
-   transform: translatex(-50%);
- }
+.navbar {
+  min-height: 40px;
+}
 
- .navbar-brand .title {
-   color: white;
- }
- .image {
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  min-height: 40px;
+}
+
+.navbar-brand .title {
+  color: white;
+}
+
+#menu {
+  min-height: 30px;
+}
+
+.navbar-brand .navbar-item {
+  padding: 0;
+  color: white;
+}
+
+.navbar-brand .button {
+  padding: 0;
+  height: 30px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.image {
+  border-radius: 25%;
+  img {
     border-radius: 25%;
-    img {
-      border-radius: 25%;
-    }
- }
- 
+  }
+}
+
+.subtitle {
+  font-size: 10px;
+}
