@@ -1,5 +1,10 @@
-<h1>New Post</h1>
-
-<%= render 'form', post: @post %>
-
-<%= link_to 'Back', posts_path %>
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <%= render 'form', post: @post %>
+    </div>
+    <div class="column is-narrow">
+      <%= render 'profile' %>
+    </div>
+  </div>
+</section>
