@@ -13,20 +13,12 @@
       </div>
       <div class="media-content">
         <div class="content">
-          <p class="title is-4"><%= link_to post.title, post %>
-            <% if user_signed_in? %>
-              <%= link_to post, method: :delete,
-                                class: "is-size-5",
-                                data: { confirm: "Are you sure you want to delete this post?" } do %>
-                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-              <% end %>
-            <% end %>
-          </p>
+          <p class="title is-4"><%= link_to post.title, post %></p>
           <p class="subtitle">
             <% if user_signed_in? %>
-              <strong><%= current_user.username %></strong><br />
+              <strong><%= current_user.username %></strong>
             <% else %>
-              <strong>Anonymous User</strong><br />
+              <strong>Anonymous User</strong>
             <% end %>
           </p>
           
